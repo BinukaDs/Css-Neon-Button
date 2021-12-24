@@ -1,0 +1,85 @@
+:root {
+    --blue: #e71f82;
+}
+
+body, html {
+    height: 100%;
+    margin: 0;
+}
+
+* {
+    box-sizing: border-box;
+  }
+
+.bg {
+    background-image: url("Images/wall.jpg");
+    height: 100%; 
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.content {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    padding: 0.5rem 1em;
+    font-size: 4rem;
+    font-family: 'Twinkle Star', cursive;
+    color: var(--blue);
+    border: 6px solid var(--blue);
+    text-shadow: 2px 0.6px;
+    background-color: rgba(231, 31, 130, 0.25);
+    border-radius: 10px;
+    transition: 0.4s all ease-in-out;
+
+}
+
+
+.shadow {
+    content: "";
+    position: absolute;
+    transition: 0.4s all ease-in-out;
+    background-color: var(--blue);
+    top: 90%;
+    left: 0%;
+    filter: blur(70px);
+    width: 100%;
+    height: 100%;
+    transform: perspective(1em) rotateX(40deg) scale(1, 0.35)
+}
+
+.shadow-top {
+    content: "";
+    position: absolute;
+    transition: 0.4s all ease-in-out;
+    background-color: var(--blue);
+    bottom: 90%;
+    left: 0%;
+    filter: blur(70px);
+    width: 100%;
+    height: 100%;
+    transform: perspective(1em) rotateX(-20deg) scale(1, 0.35)
+}
+
+.content:hover .shadow {
+    transition: 0.4s all ease-in-out;
+    background-color: var(--blue);
+    box-shadow: 0px 3px 70px 33px var(--blue);
+}
+
+.content:hover .shadow-top {
+    transition: 0.4s all ease-in-out;
+    box-shadow: 0px 3px 33px 70px var(--blue);
+    background-color: var(--blue);
+}
+
+.content:hover {
+    transition: 0.4s all ease-in-out;
+    box-shadow: 0px 3px 70px 33px var(--blue);
+    border-color: var(--blue);
+    color: black;
+    background-color: var(--blue);
+}
+
